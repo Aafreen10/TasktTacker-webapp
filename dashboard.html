@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TaskVerse Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="dashboard-header">
+    <h1>TaskVerse 📋</h1>
+    <div class="user-actions">
+      <span id="userName"></span>
+      <button id="logoutBtn">Logout</button>
+    </div>
+  </header>
+  <button id="toggleMode">🌙 Toggle Mode</button>
+  
+
+
+
+  <div class="container">
+    <div class="dashboard-info">
+      <p id="todayDate">📅 Today:</p>
+      <p id="quote">“Your task manager, your universe.”</p>
+      <p id="author">– TaskVerse</p>
+    </div>
+
+    <!-- Task Form -->
+    <div class="task-form">
+      <input type="text" id="taskTitle" placeholder="Task Title" required>
+      <textarea id="taskDesc" placeholder="Task Description"></textarea>
+      <input type="date" id="taskDate">
+      <select id="taskPriority">
+        <option value="">Select Priority</option>
+        <option value="High">🔴 High</option>
+        <option value="Medium">🟡 Medium</option>
+        <option value="Low">🟢 Low</option>
+      </select>
+      <select id="taskCategory">
+        <option value="">Select Category</option>
+        <option value="Work">💼 Work</option>
+        <option value="Personal">🏠 Personal</option>
+        <option value="Study">📚 Study</option>
+      </select>
+      <button id="addTaskBtn">Add Task</button>
+    </div>
+
+    <!-- Filters -->
+    <div class="filters">
+      <select id="filterStatus">
+        <option value="all">Show All</option>
+        <option value="done">Completed</option>
+        <option value="pending">Pending</option>
+      </select>
+      <input type="text" id="searchTask" placeholder="Search tasks...">
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="progress-container">
+      <p id="progressText"></p>
+      <div class="progress-bar-bg">
+        <div id="progressBar" class="progress-bar"></div>
+      </div>
+    </div>
+
+    <!-- Task List -->
+    <div id="taskList" class="task-list"></div>
+  </div>
+
+  <script src="auth.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
